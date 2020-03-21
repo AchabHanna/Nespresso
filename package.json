@@ -1,0 +1,24 @@
+{
+  "name": "nespresso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel buil src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AchabHanna/Nespresso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AchabHanna/Nespresso/issues"
+  },
+  "homepage": "https://github.com/AchabHanna/Nespresso#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3"
+  }
+}

@@ -1,1 +1,10 @@
+@import "reset";
 @import "header";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}

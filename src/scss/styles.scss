@@ -1,0 +1,11 @@
+@import "global/reset";
+@import "global/variable";
+@import "layouts/header";
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}

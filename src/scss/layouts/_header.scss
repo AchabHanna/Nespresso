@@ -1,1 +1,131 @@
+.nav {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  transition: height 0.5s, width 0.5s, left 0.5s, bottom 0.5s,
+    border-radius 0.3s;
 
+  @include medium {
+    width: 100vw;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+  }
+
+  &.is-open {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    left: 0;
+    top: 0;
+
+    @include medium {
+      height: 50px;
+    }
+  }
+
+  .nav__open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include medium {
+      display: none;
+    }
+
+    .nav__openIcon {
+      transition: background-color 0.3s;
+    }
+
+    .nav__openIcon,
+    .nav__openIcon::before,
+    .nav__openIcon::after {
+      height: 3px;
+      width: 36px;
+      background-color: black;
+    }
+
+    .nav__openIcon::before,
+    .nav__openIcon::after {
+      content: "";
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .nav__openIcon::before {
+      transform: translateY(-9px);
+    }
+
+    .nav__openIcon::after {
+      transform: translateY(6px);
+    }
+  }
+}
+
+.nav__items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transform: translate(calc(-50vw + 40px), calc(-50vh + 40px)) scale(0);
+  opacity: 0;
+  transition: transform 0.5s;
+
+  @include medium {
+    position: static;
+    opacity: 1;
+    transform: none;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  li {
+    font-size: 20px;
+
+    @include medium {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+
+      @include medium {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+nav.is-open .nav__items {
+  transform: none;
+  opacity: 1;
+}
+
+nav:not(is-open) .nav__items {
+  pointer-events: none;
+}
+
+nav.is-open .nav__openIcon {
+  background-color: transparent;
+
+  &::before {
+    transform: translateY(1px) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-1px) rotate(-45deg);
+  }
+}

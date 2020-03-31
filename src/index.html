@@ -6,23 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nespresso</title>
     <link rel="stylesheet" href="scss/styles.scss" />
+    <script defer src="js/burgerMenu.js"></script>
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <header class="header"></header>
-      <nav class="nav" id="nav">
-        <div class="nav__open" id="open">
-          <div class="nav__openIcon"></div>
+    <header class="header">
+      <div class="header__delivery">
+        <h1 class="header__text">
+          LIVRAISON GRATUITE sur toutes les commandes à partir de 75€ jusqu’au
+          19 décembre !
+        </h1>
+      </div>
+      <div class="div">
+        <nav class="nav" id="nav">
+          <ul class="nav__items">
+            <li>Nos cafés</li>
+            <li>Nos machines</li>
+            <li>Nos accessoires</li>
+            <li>Nos valeurs</li>
+            <li>Nous trouver</li>
+            <li>Pro</li>
+          </ul>
+          <div class="nav__open" id="open">
+            <div class="nav__openIcon"></div>
+          </div>
+        </nav>
+        <div class="logo">
+          <img src="./IMG/logoNesspresso.svg" alt="logo Nespresso" />
         </div>
-        <ul class= "nav__items">
-          <li>Nos cafés</li>
-          <li>Nos machines</li>
-          <li>Nos accessoires</li>
-          <li>Nos valeurs</li>
-          <li>Nous trouver</li>
-          <li>Pro</li>
-        </ul>
-      </nav>
+        <div class="icons">
+          <img class="icons__icon" src="./IMG/client.svg" alt="connexion" />
+          <img class="icons__icon" src="./IMG/panier.svg" alt="panier" />
+        </div>
+      </div>
     </header>
   </body>
 </html>

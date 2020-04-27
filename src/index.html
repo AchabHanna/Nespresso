@@ -11,36 +11,40 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__delivery">
+      <!-- <div class="header__delivery">
         <h1 class="header__text">
           LIVRAISON GRATUITE sur toutes les commandes à partir de 75€ jusqu’au
           19 décembre !
         </h1>
-      </div>
-      <div class="div">
-        <nav class="nav" id="nav">
+      </div> -->
+      <div class="header__menu menu">
+        <nav class="menu__nav nav" id="nav">
+          <div class="nav__open open" id="open">
+            <div class="open__openIcon"></div>
+          </div>
           <ul class="nav__items">
-            <li>Nos cafés</li>
+            <li>cafés</li>
             <li>Nos machines</li>
             <li>Nos accessoires</li>
             <li>Nos valeurs</li>
             <li>Nous trouver</li>
             <li>Pro</li>
           </ul>
-          <div class="nav__open" id="open">
-            <div class="nav__openIcon"></div>
-          </div>
         </nav>
-        <div class="logo">
-          <img
-            class="logo__nespresso"
-            src="./IMG/logoNesspresso.svg"
-            alt="logo Nespresso"
-          />
-        </div>
-        <div class="icons">
-          <img class="icons__icon" src="./IMG/client.svg" alt="connexion" />
-          <img class="icons__icon" src="./IMG/panier.svg" alt="panier" />
+        <div class="menu__logo logo">
+          <img src="/IMG/logoNesspresso.svg" alt="" class="logo__business" />
+          <div class="menu__icon icon">
+            <img
+              src="/IMG/panier.svg"
+              alt=""
+              class="icon__user icon__user--card"
+            />
+            <img
+              src="/IMG/client.svg"
+              alt=""
+              class="icon__user icon__user--account"
+            />
+          </div>
         </div>
       </div>
     </header>

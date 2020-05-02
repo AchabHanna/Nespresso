@@ -1,8 +1,9 @@
-@import "global/reset";
-@import "global/variable";
-@import "global/mixin";
-@import "layouts/burgerMenu";
-@import "layouts/style.scss";
+@import "global/_reset";
+@import "global/_fonts";
+@import "global/_variable";
+@import "global/_mixin";
+@import "layouts/header";
+@import "layouts/main";
 
 * {
   box-sizing: border-box;

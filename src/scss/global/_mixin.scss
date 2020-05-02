@@ -5,13 +5,13 @@
 }
 
 @mixin medium {
-  @media (min-width: 700px) {
+  @media (min-width: 600px) {
     @content;
   }
 }
 
 @mixin large {
-  @media (min-width: 800px) {
+  @media (min-width: 990px) {
     @content;
   }
 }

@@ -25,11 +25,10 @@
 
 .menu {
   display: flex;
-  background-color: #fda091;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  //margin: 0 15px 10px 15px;
+  margin: 0 15px 15px 15px;
   @include medium {
     flex-direction: column;
   }
@@ -80,7 +79,7 @@
 
     .open {
       display: flex;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
       width: 50px;
       height: 50px;
@@ -136,7 +135,6 @@
         flex-direction: row;
         justify-content: space-between;
         margin-right: 10px;
-        //margin: 5px 10px 10px 5px;
       }
     }
 
@@ -158,7 +156,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 66%;
+    width: 72%;
     @include medium {
       order: -1;
       width: 100%;

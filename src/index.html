@@ -10,14 +10,14 @@
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <div class="hero">
+    <div class="container__header">
       <header class="header">
-        <!-- <div class="header__delivery">
-        <h1 class="header__text">
-          LIVRAISON GRATUITE sur toutes les commandes à partir de 75€ jusqu’au
-          19 décembre !
-        </h1>
-      </div> -->
+        <div class="header__delivery">
+          <h1 class="header__text">
+            LIVRAISON GRATUITE sur toutes les commandes à partir de 75€ jusqu’au
+            19 décembre !
+          </h1>
+        </div>
         <div class="header__menu menu">
           <nav class="menu__nav nav" id="nav">
             <div class="nav__open open" id="open">
@@ -33,23 +33,27 @@
             </ul>
           </nav>
           <div class="menu__logo logo">
-            <img src="/IMG/logoNesspresso.svg" alt="" class="logo__business" />
+            <img
+              src="/IMG/logoNesspresso.svg"
+              alt="Logo nespresso"
+              class="logo__business"
+            />
             <div class="menu__icon icon">
               <img
                 src="/IMG/panier.svg"
-                alt=""
+                alt="icône panier client"
                 class="icon__user icon__user--card"
               />
               <img
                 src="/IMG/client.svg"
-                alt=""
+                alt="icône connexion"
                 class="icon__user icon__user--account"
               />
             </div>
           </div>
         </div>
       </header>
-      <main>
+      <section class="hero">
         <div class="hero__product product">
           <img
             src="/IMG/hero__capsule1.svg"
@@ -65,13 +69,148 @@
             <h1 class="describe__title">NOUVEAU !</h1>
             <h2 class="describe__subtitle">Variations Nordic</h2>
             <p class="describe__product">
-              Des saveurs gourmandes inspirées<br />
-              des confitures nordiques
+              Des saveurs gourmandes inspirées des confitures nordiques
             </p>
             <button class="describe__button">Découvrir</button>
           </div>
         </div>
-      </main>
+      </section>
     </div>
+    <section class="section__products products">
+      <div class="products__primary mulberry">
+        <img
+          src="/IMG/Capsule__petitMurier.svg"
+          alt="capsule saveur petit mûrier"
+          class="mulberry__picture"
+        />
+        <div class="mulberry__product">
+          <p class="mulberry__title">Saveur petit mûrier</p>
+          <p class="mulberry__describe">
+            Inspiré du petit-mûrier<br />
+            Retrouvez la rondeur du LIVANTO <br />associée à un goût fuité et
+            une touche<br />
+            d’acidité
+          </p>
+          <div class="mulberry__intensity intensity">
+            <p class="intensity__text">Intensité</p>
+            <img
+              src="/IMG/Bulles.svg"
+              alt="curseur intensité"
+              class="intensity__picture"
+            />
+          </div>
+          <div class="mulberry__moreInformation moreInformation">
+            <p class="moreInformation__text">En savoir plus</p>
+            <img
+              src="/IMG/elementGraphique__chevron.svg"
+              alt="chevron"
+              class="moreInformation__picture"
+            />
+          </div>
+          <div class="mulberry__info info">
+            <p class="info__price">0,95$</p>
+            <div class="info__quantity quantity">
+              <p class="quantity__number">10</p>
+              <img
+                src="/IMG/chevron_bas.svg"
+                alt="chevron"
+                class="quantity__select"
+              />
+            </div>
+          </div>
+          <button class="mulberry__add">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="products__secondary blackCoffee">
+        <img
+          src="/IMG/Capsule__noirNordique.svg"
+          alt="capsule café noir nordique"
+          class="blackCoffee__picture"
+        />
+        <div class="blackCoffee__product">
+          <p class="blackCoffee__title">Café noir nordique</p>
+          <p class="blackCoffee__describe">
+            Inspiré d’Afrique et d’Amérique du Sud<br />
+            Sucombez à l’élégance de ce mélange.<br />
+            Des notes fruitées et sucrées qui <br />sauront ravirent vos
+            papilles
+          </p>
+          <div class="blackCoffee__intensity intensity">
+            <p class="intensity__text">Intensité</p>
+            <img
+              src="/IMG/Bulles.svg"
+              alt="degrés d'intensité"
+              class="intensity__picture"
+            />
+          </div>
+          <div class="blackCoffee__moreInformation moreInformation">
+            <p class="moreInformation__text">En savoir plus</p>
+            <img
+              src="/IMG/elementGraphique__chevron.svg"
+              alt=""
+              class="moreInformation__picture"
+            />
+          </div>
+          <div class="blackCoffee__info info">
+            <p class="info__price">0,95$</p>
+            <div class="info__quantity quantity">
+              <p class="quantity__number">10</p>
+              <img
+                src="/IMG/chevron_bas.svg"
+                alt="chevron"
+                class="quantity__select"
+              />
+            </div>
+          </div>
+          <button class="blackCoffee__add">Ajouter</button>
+        </div>
+      </div>
+
+      <div class="products__tertiary almondCake">
+        <img
+          src="/IMG/Capsule__gâteauDamende.svg"
+          alt="capsule saveur gâteau d'amendes"
+          class="almondCake__picture"
+        />
+        <div class="almondCake__product">
+          <p class="almondCake__title">Saveur gâteau d'amende</p>
+          <p class="almondCake__describe">
+            Inspiré d’un célèbre dessert norvégien<br />
+            Une association parfaite de goût:<br />
+            crème à la vanille, crème fouettée,<br />
+            amendes et une touche de meringue
+          </p>
+          <div class="almondCake__intensity intensity">
+            <p class="intensity__text">Intensité</p>
+            <img
+              src="/IMG/Bulles.svg"
+              alt="degrès d'intensité"
+              class="intensity__picture"
+            />
+          </div>
+          <div class="almondCake__moreInformation moreInformation">
+            <p class="moreInformation__text">En savoir plus</p>
+            <img
+              src="/IMG/elementGraphique__chevron.svg"
+              alt=""
+              class="moreInformation__picture"
+            />
+          </div>
+          <div class="almondCake__info info">
+            <p class="info__price">0,95$</p>
+            <div class="info__quantity quantity">
+              <p class="quantity__number">10</p>
+              <img
+                src="/IMG/chevron_bas.svg"
+                alt="chevron"
+                class="quantity__select"
+              />
+            </div>
+          </div>
+          <button class="almondCake__add">Ajouter</button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

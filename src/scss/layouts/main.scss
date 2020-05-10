@@ -354,7 +354,7 @@ main {
 }
 .advantage {
   background: $section__gradient;
-  padding: 80px 20px 80px 80px;
+  padding: 40px 20px 80px 20px;
   @include large {
     padding: 130px 0 130px 130px;
   }
@@ -403,8 +403,11 @@ main {
 }
 
 .account {
-  margin: 200px 40px 140px 40px;
-  text-align: center;
+  margin: 240px 40px 140px 40px;
+  @include medium {
+    text-align: center;
+    margin: 190px 40px 140px 40px;
+  }
 
   &__title {
     font-size: 24px;
@@ -434,6 +437,88 @@ main {
 
     .account__add {
       margin-right: 60px;
+    }
+  }
+}
+
+.footer__partCommercial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondaryColor;
+  @include large {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .partCommercial__element {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: $robottoRegular;
+
+    .icône {
+      margin-bottom: 10px;
+    }
+  }
+  .partCommercial__goUp {
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $footer__information;
+    border-bottom: 1px solid $footer__information;
+    @include large {
+      display: none;
+    }
+    .partCommercial__goUpText {
+      margin-left: 10px;
+      font-size: 30px;
+      color: $footer__information;
+      font-family: $robottoRegular;
+    }
+  }
+}
+.partLegal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include large {
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $secondaryColor;
+  }
+  .partLegal__element {
+    width: 100vw;
+    height: 80px;
+    color: $footer__information;
+    font-family: $robottoRegular;
+    font-size: 20px;
+    border-bottom: 1px solid $footer__information;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include large {
+      color: white;
+      border-bottom: none;
+      width: 100%;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .add {
+      @include large {
+        display: none;
+      }
     }
   }
 }

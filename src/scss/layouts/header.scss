@@ -34,9 +34,34 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px 15px 20px;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+
     @include medium {
       flex-direction: column;
+      display: grid;
+      grid-template-columns: 90vw 10vw;
+      grid-auto-rows: 10vh 4vh;
+      grid-template-areas:
+        "logo icon"
+        "navItems navItems";
+
+      .logo {
+        grid-area: logo;
+      }
+
+      .icon {
+        grid-area: icon;
+      }
+
+      .nav {
+        grid-area: navItems;
+      }
+    }
+    &-on-scroll {
+      background: #fea89a;
+      top: 0;
     }
 
     .nav {
@@ -60,17 +85,17 @@
 
         .nav__items {
           position: fixed;
+          top: 0;
           background-color: $headerColor;
           transform: none;
           opacity: 1;
 
           @include medium {
-            position: static;
             background-color: transparent;
           }
         }
 
-        .open__openIcon {
+        .nav__openIcon {
           background-color: transparent;
 
           &::before {
@@ -81,13 +106,21 @@
             transform: translateY(-2px) rotate(-45deg);
           }
         }
+
+        .nav__open {
+          position: fixed;
+          top: 15px;
+          left: 15px;
+          z-index: 2;
+        }
       }
 
       &:not(.is-open) ul {
         pointer-events: none;
+        justify-content: space-around;
       }
 
-      .open {
+      .nav__open {
         display: flex;
         justify-content: left;
         align-items: center;
@@ -97,33 +130,32 @@
         @include medium {
           display: none;
         }
+      }
+      &__openIcon {
+        transition: background-color 0.3s;
+      }
 
-        &__openIcon {
-          transition: background-color 0.3s;
-        }
+      &__openIcon,
+      &__openIcon::before,
+      &__openIcon::after {
+        width: 36px;
+        height: 3px;
+        background-color: white;
+      }
 
-        &__openIcon,
-        &__openIcon::before,
-        &__openIcon::after {
-          width: 36px;
-          height: 3px;
-          background-color: white;
-        }
+      &__openIcon::before,
+      &__openIcon::after {
+        content: "";
+        display: block;
+        transition: transform 0.3s;
+      }
 
-        &__openIcon::before,
-        &__openIcon::after {
-          content: "";
-          display: block;
-          transition: transform 0.3s;
-        }
+      &__openIcon::before {
+        transform: translateY(-9px);
+      }
 
-        &__openIcon::before {
-          transform: translateY(-9px);
-        }
-
-        &__openIcon::after {
-          transform: translateY(6px);
-        }
+      &__openIcon::after {
+        transform: translateY(6px);
       }
 
       .nav__items {
@@ -168,7 +200,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 72%;
+      //width: 72%;
       @include medium {
         order: -1;
         width: 100%;
@@ -183,19 +215,18 @@
           width: 150px;
         }
       }
-
-      .icon__user {
-        width: 18px;
-        height: 18px;
+    }
+    .icon__user {
+      width: 18px;
+      height: 18px;
+      @include medium {
+        width: 20px;
+        height: 20px;
+      }
+      &--card {
+        margin-right: 10px;
         @include medium {
-          width: 20px;
-          height: 20px;
-        }
-        &--card {
-          margin-right: 10px;
-          @include medium {
-            margin-right: 15px;
-          }
+          margin-right: 15px;
         }
       }
     }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nespresso</title>
     <link rel="stylesheet" href="scss/styles.scss" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/burgerMenu.js"></script>
     <script defer src="js/script.js"></script>
   </head>
@@ -20,8 +21,8 @@
         </div>
         <div class="header__menu menu">
           <nav class="menu__nav nav" id="nav">
-            <div class="nav__open open" id="open">
-              <div class="open__openIcon"></div>
+            <div class="nav__open" id="open">
+              <div class="nav__openIcon"></div>
             </div>
             <ul class="nav__items">
               <li>cafés</li>
@@ -38,21 +39,22 @@
               alt="Logo nespresso"
               class="logo__business"
             />
-            <div class="menu__icon icon">
-              <img
-                src="/IMG/panier.svg"
-                alt="icône panier client"
-                class="icon__user icon__user--card"
-              />
-              <img
-                src="/IMG/client.svg"
-                alt="icône connexion"
-                class="icon__user icon__user--account"
-              />
-            </div>
+          </div>
+          <div class="menu__icon icon">
+            <img
+              src="/IMG/panier.svg"
+              alt="icône panier client"
+              class="icon__user icon__user--card"
+            />
+            <img
+              src="/IMG/client.svg"
+              alt="icône connexion"
+              class="icon__user icon__user--account"
+            />
           </div>
         </div>
       </header>
+
       <section class="hero">
         <div class="hero__product">
           <img
@@ -452,7 +454,7 @@
           <p class="partCommercial__backFree">Retour gratuit</p>
         </div>
 
-        <div class="partCommercial__goUp">
+        <div class="partCommercial__goUp" id="goUp">
           <img src="/IMG/chevronGoUp.svg" alt="" class="" />
           <p class="partCommercial__goUpText">Haut de la page</p>
         </div>

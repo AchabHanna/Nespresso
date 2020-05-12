@@ -12,16 +12,27 @@ vertuoBlackColor.addEventListener("click", () => {
   vertuoRed.style.display = "none";
 });
 
-const citizRed = document.getElementById("citizRed");
-const citizRedColor = document.getElementById("citizRedColor");
-const citizGreyColor = document.getElementById("citizGreyColor");
+//menu on scroll
 
-citizGreyColor.addEventListener("click", () => {
-  citizGrey.style.display = "block";
-  citizRed.style.display = "none";
+var menu = document.querySelector(".menu");
+
+window.addEventListener("scroll", () => {
+  var offsetWindow = window.pageYOffset;
+  var scrolled = document.body.scrollTop;
+  var position = menu.offsetTop;
+  const dumbPosition = 3;
+  console.log(offsetWindow);
+  if (offsetWindow > dumbPosition) {
+    menu.classList.add("menu-on-scroll");
+  } else {
+    menu.classList.remove("menu-on-scroll");
+  }
 });
 
-citizRedColor.addEventListener("click", () => {
-  citizRed.style.display = "block";
-  citizGrey.style.display = "none";
+//retour haut de page
+
+$(function() {
+  $("#goUp").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
 });

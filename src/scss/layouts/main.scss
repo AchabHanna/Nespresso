@@ -14,7 +14,7 @@ main {
     position: relative;
     margin-top: 112px;
     @include medium {
-      margin: 112px 20px 140px 20px;
+      margin: 180px 20px 140px 20px;
     }
 
     .hero__picture {
@@ -200,20 +200,17 @@ main {
     }
   }
 
+  .visible {
+    display: block;
+  }
+
   .picture--red {
-    //position: absolute;
-    left: 0;
-    top: 0;
     display: none;
   }
 
   .picture--citizGrey {
     display: none;
   }
-
-  // .picture--black {
-  //   display: block;
-  // }
 
   &__colorContainer {
     display: flex;

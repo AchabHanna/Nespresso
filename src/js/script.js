@@ -12,6 +12,20 @@ vertuoBlackColor.addEventListener("click", () => {
   vertuoRed.style.display = "none";
 });
 
+const citizRed = document.getElementById("citizRed");
+const citizRedColor = document.getElementById("citizRedColor");
+const citizGreyColor = document.getElementById("citizGreyColor");
+
+citizGreyColor.addEventListener("click", () => {
+  citizGrey.style.display = "block";
+  citizRed.style.display = "none";
+});
+
+citizRedColor.addEventListener("click", () => {
+  citizRed.style.display = "block";
+  citizGrey.style.display = "none";
+});
+
 //menu on scroll
 
 var menu = document.querySelector(".menu");
@@ -30,7 +44,6 @@ window.addEventListener("scroll", () => {
 });
 
 //retour haut de page
-
 $(function() {
   $("#goUp").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");

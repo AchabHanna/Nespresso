@@ -1,7 +1,7 @@
 # Nespresso
 
-design and integration of the nespresso website
-Deployed here
+## design and integration of the nespresso website
+
 
 ⬇️ How to install
 Clone the repository In the project directory, run:
